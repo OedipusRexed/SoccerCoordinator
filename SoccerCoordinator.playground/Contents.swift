@@ -179,18 +179,23 @@ for inexperiencedPlayer in players {
 var letters: [String] = []
 
 // Personalized Letters
+// had to check stack overflow to find the "Optional" print fix
 
 for player in teamDragons {
-    letters.append("Hello, \(player["Guardians"]!). You're recieving this letter because your child, \(player["Name"]!) , has been placed on Team Dragon! Please make sure that \(player["Name"]!) is present for the first team practice on March 17th, at 1pm. We look forward to seeing you and your child there!")
+    letters.append("Dear \(player["Guardians"]!), you're recieving this letter because your child, \(player["Name"]!) , has been placed on Team Dragon! Please make sure that \(player["Name"]!) is present for the first team practice on March 17th, at 1pm. We look forward to seeing you and your child there!")
     
 }
 
 for player in teamSharks {
-    letters.append("Hello, \(player["Guardians"]!). You're recieving this letter because your child, \(player["Name"]!) , has been placed on Team Sharks! Please make sure that \(player["Name"]!) is present for the first team practice on March 17th, at 3pm. We look forward to seeing you and your child there!")
+    letters.append("Dear \(player["Guardians"]!), you're recieving this letter because your child, \(player["Name"]!) , has been placed on Team Sharks! Please make sure that \(player["Name"]!) is present for the first team practice on March 17th, at 3pm. We look forward to seeing you and your child there!")
 }
 
 for player in teamRaptors {
-    letters.append("Hello, \(player["Guardians"]!). You're recieving this letter because your child, \(player["Name"]!) , has been placed on Team Raptors! Please make sure that \(player["Name"]!) is present for the first team practice on March 18th, at 1pm. We look forward to seeing you and your child there!")
+    letters.append("Dear \(player["Guardians"]!), you're recieving this letter because your child, \(player["Name"]!) , has been placed on Team Raptors! Please make sure that \(player["Name"]!) is present for the first team practice on March 18th, at 1pm. We look forward to seeing you and your child there!")
 }
 
-letters
+// Resubmitting, i believe this is all that was missing before, I was going to submit with dump(letters) but i think we aren't supposed to include things that haven't been covered, so hopefully this covers it
+
+for letter in letters {
+    print(letter)
+}
